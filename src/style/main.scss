@@ -1,7 +1,11 @@
 /*imports */
 @import "layout.scss";
 @import "header-navbar.scss";
-
+@import "auth/signin.scss";
+@import "auth/signup.scss";
+html {
+  font-size: 62.5%;
+}
 *,
 *::after,
 *::before {
