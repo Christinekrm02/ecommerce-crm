@@ -2,6 +2,7 @@
 @import "layout.scss";
 @import "header-navbar.scss";
 @import "page-title.scss";
+@import "form-fields.scss";
 @import "auth/signin.scss";
 @import "auth/signup.scss";
 html {
@@ -13,5 +14,8 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: "montserrat";
+}
+body {
+  font-family: "Open Sans";
+  color: #808080;
 }
