@@ -3,6 +3,8 @@ import { reduxForm, Field } from "redux-form";
 import { FormInput, FormButton } from "../form-fields";
 import QuickLinksDetails from "../quicklinks-details";
 
+import history from "../../history";
+
 class SignInForm extends Component {
   render() {
     {
@@ -13,7 +15,7 @@ class SignInForm extends Component {
       {
         _id: 0,
         title: "Not registered yet? Create an account",
-        onClick: () => console.log("click here"),
+        onClick: () => history.push("/signup"),
       },
       {
         _id: 1,
