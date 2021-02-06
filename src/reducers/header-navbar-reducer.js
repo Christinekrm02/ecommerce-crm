@@ -1,8 +1,22 @@
 import { SET_HEADER_LINKS, SET_NAVBAR_LINKS } from "../actions/types";
 
 const INITIAL_STATE = {
-  headerlinks: [],
-  navbarLinks: [],
+  headerLinks: [
+    {
+      title: "another one",
+    },
+    {
+      title: "purchase 2",
+    },
+  ],
+  navbarLinks: [
+    {
+      title: "Building with redux",
+    },
+    {
+      title: "purchase",
+    },
+  ],
 };
 
 export default function (state = INITIAL_STATE, action) {
