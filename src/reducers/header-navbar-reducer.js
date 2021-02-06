@@ -11,10 +11,12 @@ const INITIAL_STATE = {
   ],
   navbarLinks: [
     {
-      title: "Building with redux",
+      title: "Account",
+      active: true,
     },
     {
-      title: "purchase",
+      title: "Purchase",
+      active: false,
     },
   ],
 };
