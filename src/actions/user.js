@@ -1,9 +1,9 @@
 import { SET_USER_PURCHASES } from "./types";
-export function setPurchaseDetail(){
-  return ({
+export function setPurchaseDetail() {
+  return {
     type: SET_PURCHASE_DETAIL,
-    payload: _id
-  })
+    payload: _id,
+  };
 }
 export function fetchUserPurchases() {
   return {
@@ -13,18 +13,19 @@ export function fetchUserPurchases() {
         _id: 0,
         total: 9,
         orderNumber: "A00SSB233",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString,
         creditCard: "-000",
         user: {
           shippingAddress: "555 Twopiece Street",
           name: "Christine M",
         },
       },
+
       {
         _id: 1,
         total: 23.77,
         orderNumber: "890SSB233",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString,
         creditCard: "-033",
         user: {
           shippingAddress: "90 Wessone Street",
@@ -35,7 +36,7 @@ export function fetchUserPurchases() {
         _id: 3,
         total: 22,
         orderNumber: "A00SSCC565",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString,
         creditCard: "-078",
         user: {
           shippingAddress: "879A Boyland Street",
@@ -46,7 +47,7 @@ export function fetchUserPurchases() {
         _id: 4,
         total: 29.44,
         orderNumber: "A00BGH233",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString,
         creditCard: "-030",
         user: {
           shippingAddress: "908 Notchiham ",
@@ -57,7 +58,7 @@ export function fetchUserPurchases() {
         _id: 5,
         total: 99.44,
         orderNumber: "A908BGH233",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString,
         creditCard: "-234",
         user: {
           shippingAddress: "57 Layne Ave",
@@ -68,7 +69,7 @@ export function fetchUserPurchases() {
         _id: 6,
         total: 98.44,
         orderNumber: "A908BGABH7",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString,
         creditCard: "-786",
         user: {
           shippingAddress: "92 Newlaine",

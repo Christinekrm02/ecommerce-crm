@@ -22,6 +22,15 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         purchaseDetail,
+        _id: -1,
+        total: 0,
+        orderNumber: "",
+        orderDate: null,
+        creditCard: "",
+        user: {
+          name: " ",
+          shippingAddress: "",
+        },
       };
     default:
       return state;
