@@ -5,6 +5,12 @@ import { FormInput, FormButton, LongGrayButton } from "../form-fields";
 import history from "../../history";
 
 class AccountInformationForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showPasswords: false,
+    };
+  }
   render() {
     {
       /* obj passed in from signin.js. i.e sign-in__form */
@@ -63,16 +69,48 @@ class AccountInformationForm extends Component {
           placeholder="Zip"
           component={FormInput}
         />
-
-        <Field
-          className="account-information-form__change-password"
-          onClick={() => console.log("show passwords")}
-          name="change-password"
-          type="button"
-          title="Change Password"
-          labelTitle="Password"
-          component={LongGrayButton}
-        />
+        {/* shows current pwrd/ change pwrd fields */}
+        {this.state.showPasswords ? (
+          [
+            <Field
+              key={0}
+              className="account-information-form__current-password"
+              name="current"
+              type="password"
+              title="Current Password"
+              placeholder="Current Password"
+              component={FormInput}
+            />,
+            <Field
+              key={1}
+              className="account-information-form__new-password"
+              name="new"
+              type="password"
+              title="New Password"
+              placeholder="New Password"
+              component={FormInput}
+            />,
+            <Field
+              key={2}
+              className="account-information-form__confirm-password"
+              name="confirm"
+              type="password"
+              title="Confirm Password"
+              placeholder="Confirm Password"
+              component={FormInput}
+            />,
+          ]
+        ) : (
+          <Field
+            className="account-information-form__change-password"
+            onClick={() => this.setState({ showPasswords: true })}
+            name="change-password"
+            type="button"
+            title="Change Password"
+            labelTitle="Password"
+            component={LongGrayButton}
+          />
+        )}
       </form>
     );
   }
