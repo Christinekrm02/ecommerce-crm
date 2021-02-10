@@ -32,8 +32,31 @@
       outline: none;
     }
   }
+
   &__gray-button {
     width: 137px;
     background: #999;
+  }
+}
+
+.form-button-long-gray {
+  display: grid;
+  grid-gap: 6.5px;
+
+  &__button {
+    height: 38px;
+    width: 243px;
+    border-radius: 20px;
+    background-color: #999;
+    font-size: 16px;
+    color: #fff;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &__label {
+    font-size: 14px;
+    padding-left: 20px;
   }
 }
