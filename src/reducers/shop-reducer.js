@@ -1,22 +1,33 @@
-import { /*SET_SHOP_CATEGORIES*/ SET_SHOP_PRODUCTS } from "../actions/types";
+import {
+  SET_SHOP_CATEGORIES,
+  SET_SHOP_PRODUCTS,
+  FILTER_PRODUCTS_BY_CATEGORY_ID,
+} from "../actions/types";
 
 const INITIAL_STATE = {
   categories: [],
-  selectedCategoryID: 0,
   productsSelected: [],
   products: [],
 };
-export default function (state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
-    /*  case SET_SHOP_CATEGORIES:
+    case SET_SHOP_CATEGORIES:
+      const categories = action.payload;
+
       return {
         ...state,
-        categories: action.payload,
-      }; */
+        categories,
+      };
     case SET_SHOP_PRODUCTS:
       return {
         ...state,
         products: action.payload,
+      };
+    case FILTER_PRODUCTS_BY_CATEGORY_ID:
+      console.log("FILTER_PRODUCTS_BY_CATEGORY_ID: ", action.payload);
+      return {
+        ...state,
+        // selectedCategoryId
       };
     default:
       return state;
