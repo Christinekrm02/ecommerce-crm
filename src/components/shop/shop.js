@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import * as actions from "../../actions";
+import ShopCart from "./shop-cart";
 import ShopProduct from "./shop-product";
 import ShopSearchBar from "./shop-searchbar";
 
@@ -35,8 +36,6 @@ class Shop extends Component {
     this.props.filterProductsWithQuery(fields);
   };
   render() {
-    //searchbar
-    //product component
     return (
       <div className="shop">
         <ShopSearchBar onSubmit={this.onSubmit} className="shop__search-bar" />
