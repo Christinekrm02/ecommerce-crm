@@ -14,8 +14,6 @@ function formSearchBar(props) {
 
 // <i class="fas fa-search"></i>
 
-
-
 class ShopSearchBar extends Component {
   render() {
     const { className, handleSubmit } = this.props;
@@ -23,7 +21,7 @@ class ShopSearchBar extends Component {
       <form onSubmit={handleSubmit} className={`${className} shop-search-bar`}>
         <Field
           className="shop-search-bar__form-search-bar"
-          name="shop-searchbar"
+          name="query"
           placeholder="Search"
           component={formSearchBar}
         />

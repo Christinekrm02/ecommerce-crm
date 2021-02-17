@@ -31,6 +31,7 @@ class Shop extends Component {
 
   onSubmit = fields => {
     console.log("onSubmit", fields);
+    this.props.filterProductsWithQuery(fields);
   };
   render() {
     //searchbar
