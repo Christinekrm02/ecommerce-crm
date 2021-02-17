@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import * as actions from "../../actions";
+import ShopSearchBar from "./shop-searchbar";
 
 class Shop extends Component {
   componentDidMount() {
@@ -27,22 +28,29 @@ class Shop extends Component {
     }
     return true;
   }
+
+  onSubmit = fields => {
+    console.log("onSubmit", fields);
+  };
   render() {
     //searchbar
     //product component
     return (
-      <div className="shop__products">
-        {this.props.filteredProducts.map(product => {
-          return (
-            <div key={product._id} className="shop-product">
-              {product.title}
-              <div className="shop-product__title">{product.title}</div>
-              <div className="shop-product__description">
-                {product.description}
+      <div className="shop">
+        <ShopSearchBar onSubmit={this.onSubmit} className="shop__search-bar" />
+        <div className="shop__products">
+          {this.props.filteredProducts.map(product => {
+            return (
+              <div key={product._id} className="shop-product">
+                {product.title}
+                <div className="shop-product__title">{product.title}</div>
+                <div className="shop-product__description">
+                  {product.description}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     );
     //cart button
