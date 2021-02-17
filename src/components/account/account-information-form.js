@@ -90,7 +90,7 @@ class AccountInformationForm extends Component {
               placeholder="New Password"
               component={FormInput}
             />,
-            <div key={3} className="account-information-form__line"></div>,
+            <div key={7} className="account-information-form__line"></div>,
             <Field
               key={2}
               className="account-information-form__confirm-password"

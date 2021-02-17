@@ -5,7 +5,7 @@ import {
   FILTER_PRODUCTS_BY_CATEGORY_ID,
 } from "./types";
 
-export function filterProductWithCategoryId(id) {
+export function filterProductByCategoryId(_id) {
   return {
     type: FILTER_PRODUCTS_BY_CATEGORY_ID,
     payload: _id,
@@ -73,6 +73,7 @@ export function fetchShopProducts() {
         description:
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
+        belongsTo: [0, 1],
       },
       {
         _id: 3,

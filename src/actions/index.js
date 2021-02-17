@@ -8,7 +8,7 @@ import { fetchUserPurchases, setPurchaseDetail } from "./user";
 import {
   fetchShopCategories,
   fetchShopProducts,
-  filterProductWithCategoryId,
+  filterProductByCategoryId,
 } from "./shop";
 export {
   setHeaderLinks,
@@ -18,5 +18,5 @@ export {
   setPurchaseDetail,
   fetchShopCategories,
   fetchShopProducts,
-  filterProductWithCategoryId,
+  filterProductByCategoryId,
 };

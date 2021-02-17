@@ -6,10 +6,10 @@ import {
 
 const INITIAL_STATE = {
   categories: [],
-  productsSelected: [],
   products: [],
+  filteredProducts: [],
 };
-export default function(state = INITIAL_STATE, action) {
+export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
     case SET_SHOP_CATEGORIES:
       const categories = action.payload;
@@ -24,10 +24,16 @@ export default function(state = INITIAL_STATE, action) {
         products: action.payload,
       };
     case FILTER_PRODUCTS_BY_CATEGORY_ID:
-      console.log("FILTER_PRODUCTS_BY_CATEGORY_ID: ", action.payload);
+       console.log("filter_products_by_category_id:", action.payload);
+      var filteredProducts = [];
+      state.products.map(product => {
+        if (product.belongsTo.includes(action.payload)) {
+          return filteredProducts.push(product);
+        }
+      });
       return {
         ...state,
-        // selectedCategoryId
+        filteredProducts,
       };
     default:
       return state;

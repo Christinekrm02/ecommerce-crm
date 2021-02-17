@@ -22,10 +22,10 @@ export default function (state = INITIAL_STATE, action) {
       return {
         ...state,
         navbarLinks: links,
-        onClick,
+        onClick: onClick,
       };
     case CHANGE_NAVBAR_ACTIVE:
-      console.log(state.navbarLinks);
+      //  console.log(state.navbarLinks);
       const navbarLinks = state.navbarLinks.map(link => {
         link.active = false;
         if (link._id == action.payload) {

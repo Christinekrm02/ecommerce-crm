@@ -32,6 +32,7 @@ function mapStateToProps(state) {
   const { navbarLinks, onClick } = state.headerNavbar;
   return {
     navbarLinks,
+    onClick,
   };
 }
 
