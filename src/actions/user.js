@@ -1,4 +1,8 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL } from "./types";
+import {
+  SET_USER_PURCHASES,
+  SET_PURCHASE_DETAIL,
+  SET_CART_PRODUCTS,
+} from "./types";
 
 export function setPurchaseDetail(_id) {
   return {
@@ -6,6 +10,39 @@ export function setPurchaseDetail(_id) {
     payload: _id,
   };
 }
+
+export function fetchCartProducts() {
+  return {
+    type: SET_CART_PRODUCTS,
+    payload: [
+      {
+        _id: 0,
+        product: {
+          _id: 0,
+          title: "JavaScript in the Browser",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
+          price: 1.99,
+          belongsTo: [0, 1],
+        },
+        quantity: 2,
+      },
+      {
+        _id: 1,
+        product: {
+          _id: 1,
+          title: "JavaScript in the Browser",
+          description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
+          price: 1.99,
+          belongsTo: [0, 1],
+        },
+        quantity: 1,
+      },
+    ],
+  };
+}
+
 export function fetchUserPurchases() {
   return {
     type: SET_USER_PURCHASES,
