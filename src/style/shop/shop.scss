@@ -3,7 +3,7 @@
   grid-row: content-s/content-e;
   grid-column: s/e;
   display: grid;
-  grid-template-rows: [search-bar-s] 38px [search-bar-e products-s] 1fr [products-e];
+  grid-template-rows: [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e];
   grid-gap: 57px;
   justify-content: center;
   &__search-bar {
@@ -21,5 +21,19 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     justify-self: center;
+  }
+  &__cart-button {
+    z-index: 5;
+  }
+  &__cart,
+  &__cart-button {
+    /* grid-row: 1/-1;
+    grid-column: 1/-1;
+    align-self: start;
+    justify-self: end; */
+
+    position: absolute;
+    top: 115px;
+    right: 0px;
   }
 }

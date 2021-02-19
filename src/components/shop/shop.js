@@ -5,6 +5,7 @@ import * as actions from "../../actions";
 import ShopCart from "./shop-cart";
 import ShopProduct from "./shop-product";
 import ShopSearchBar from "./shop-searchbar";
+import CartButton from "./cart-button";
 
 class Shop extends Component {
   constructor() {
@@ -41,6 +42,16 @@ class Shop extends Component {
     console.log("onSubmit", fields);
     this.props.filterProductsWithQuery(fields);
   };
+
+  handleAddToCart = () => {
+    if (
+      document.getElementById("shop-cart").classList.contains("cart-hidden")
+    ) {
+      document.getElementById("shop-cart").classList.remove("cart-hidden");
+
+      document.getElementById("shop-cart").classList.add("cart-hidden");
+    }
+  };
   render() {
     return (
       <div className="shop">
@@ -50,10 +61,16 @@ class Shop extends Component {
             return <ShopProduct {...product} key={product._id} />;
           })}
         </div>
-        {this.state.showCart ? <ShopCart className="shop_cart" /> : ""}
+        {this.state.showCart ? <ShopCart className="shop__cart" /> : ""}
+        //cart button
+        <CartButton
+          onClick={this.handleAddToCart}
+          className="shop__cart-button"
+          icon="fas fa-cart-plus"
+        />
+        ;
       </div>
     );
-    //cart button
   }
 }
 function mapStateToProps(state) {
