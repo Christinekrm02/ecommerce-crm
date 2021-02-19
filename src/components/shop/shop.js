@@ -7,6 +7,12 @@ import ShopProduct from "./shop-product";
 import ShopSearchBar from "./shop-searchbar";
 
 class Shop extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showCart: true,
+    };
+  }
   componentDidMount() {
     const headerLinks = [
       {
@@ -44,6 +50,7 @@ class Shop extends Component {
             return <ShopProduct {...product} key={product._id} />;
           })}
         </div>
+        {this.state.showCart ? <ShopCart className="shop_cart" /> : ""}
       </div>
     );
     //cart button
