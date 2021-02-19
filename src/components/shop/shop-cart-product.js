@@ -4,7 +4,7 @@ import GreenPriceTag from "../green-pricetag";
 
 class CartProduct extends Component {
   render() {
-    const { product, quantity } = this.props;
+    const { className, product, quantity } = this.props;
     const { title, price } = product;
     return (
       <div className={`${className} cart-product`}>
