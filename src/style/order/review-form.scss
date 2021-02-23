@@ -1,4 +1,11 @@
 .review-form {
+  &__legend {
+    grid-row: legend-s/legend-e;
+    font-size: 14px;
+    grid-column: 1/-1;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 11px;
+  }
   &__products {
     grid-column: 1/-1;
     grid-row: products/s-products-e;
