@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import CartProduct from "./shop-cart-product";
-import CartButton from "./cart-button"
+import CartButton from "./cart-button";
 
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
+import history from "../../history";
 
 function CartContent({ className, products }) {
   let count = products.length;
@@ -24,7 +25,12 @@ function CartFooter({ className, products }) {
   const price = 8.0;
   return (
     <div className={`${className} cart-footer`}>
-      <a className="cart-footer__checkout"> Checkout </a>
+      <a
+        onClick={() => history.push("/order/review")}
+        className="cart-footer__checkout">
+        {" "}
+        Checkout{" "}
+      </a>
       <div className="cart-footer__sbutotal"> Subtotal </div>
       <div className="cart-footer__price"> ${price}</div>
     </div>
