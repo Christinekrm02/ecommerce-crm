@@ -1,4 +1,9 @@
-import { SET_CART_PRODUCTS, SET_PURCHASE_DETAIL, SET_USER_PURCHASES } from "../actions/types";
+import {
+  SET_CART_PRODUCTS,
+  SET_PURCHASE_DETAIL,
+  SET_USER_PURCHASES,
+  ADD_CART_PRODUCT,
+} from "../actions/types";
 
 const INITIAL_STATE = {
   cartProducts: [],
@@ -18,11 +23,33 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
-    case SET_CART_PRODUCTS:
-      return{
+    case ADD_CART_PRODUCT:
+      var exists = false;
+      const newCartProduct = action.payload;
+      var cartProducts = [];
+      state.cartProducts.map(cartProduct => {
+        if (cartProduct.product._id == newCartProduct._id) {
+          exists = true;
+          cartProduct.quantity += 1;
+        }
+        cartProducts.push(cartProduct);
+        if ((exists = false)) {
+          cartProducts.push({
+            _id: state.cartProducts.length + 1,
+            product: newCartProduct,
+            quantity: 1,
+          });
+        }
+      });
+      return {
         ...state,
-        cartProducts: action.payload
-      }
+        cartProducts: cartProducts,
+      };
+    case SET_CART_PRODUCTS:
+      return {
+        ...state,
+        cartProducts: action.payload,
+      };
     case SET_USER_PURCHASES:
       return {
         ...state,
