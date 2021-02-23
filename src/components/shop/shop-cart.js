@@ -12,6 +12,7 @@ function CartContent({ className, products }) {
   let productsJsx = products.map(product => (
     <CartProduct {...product} key={product} />
   ));
+
   return (
     <div className={`${className} cart-content`}>
       <div className="cart-content__title">Cart ({count})</div>
@@ -22,7 +23,10 @@ function CartContent({ className, products }) {
 }
 
 function CartFooter({ className, products }) {
-  const price = 8.0;
+  let subtotal = 0;
+  const subtotal = this.props.cartProducts.map(cartProduct => {
+    subtotal += cartProduct.quantity * cartProduct.product.price;
+  });
   return (
     <div className={`${className} cart-footer`}>
       <a
@@ -32,7 +36,7 @@ function CartFooter({ className, products }) {
         Checkout{" "}
       </a>
       <div className="cart-footer__sbutotal"> Subtotal </div>
-      <div className="cart-footer__price"> ${price}</div>
+      <div className="cart-footer__price"> ${subtotal}</div>
     </div>
   );
 }
