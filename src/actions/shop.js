@@ -66,6 +66,7 @@ export function fetchShopProducts() {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 1,
@@ -74,6 +75,7 @@ export function fetchShopProducts() {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 2,
@@ -82,6 +84,7 @@ export function fetchShopProducts() {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 3,
@@ -90,6 +93,7 @@ export function fetchShopProducts() {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
         belongsTo: [0, 1, 4],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 4,
@@ -98,6 +102,7 @@ export function fetchShopProducts() {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
         belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 5,
@@ -106,6 +111,7 @@ export function fetchShopProducts() {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
         belongsTo: [0, 2],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
       {
         _id: 6,
@@ -114,6 +120,7 @@ export function fetchShopProducts() {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum illum optio omnis quidem. Laudantium harum voluptatibus expedita iste accusamus quasi sunt nihil adipisci voluptatem fugiat temporibus, voluptas libero ea debitis",
         price: 1.99,
         belongsTo: [0, 6],
+        imageUrl: "http://via.placeholder.com/80x80",
       },
     ],
   };
